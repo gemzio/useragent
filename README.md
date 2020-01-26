@@ -1,7 +1,7 @@
 # Gemz Useragent Parser
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/gemzio/useragent.svg?style=flat-square)](https://packagist.org/packages/gemzio/:package_name)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/gemzio/useragent/run-tests?label=tests)](https://github.com/gemzio/:package_name/actions?query=workflow%3Arun-tests+branch%3Amaster)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/gemzio/useragent/run-tests?label=tests)](https://github.com/gemzio/useragent/actions?query=workflow%3Arun-tests+branch%3Amaster)
 [![Quality Score](https://img.shields.io/scrutinizer/g/gemzio/useragent.svg?style=flat-square)](https://scrutinizer-ci.com/g/gemzio/:package_name)
 [![Total Downloads](https://img.shields.io/packagist/dt/gemzio/useragent.svg?style=flat-square)](https://packagist.org/packages/gemzio/:package_name)
 
