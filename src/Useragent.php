@@ -9,6 +9,9 @@ class Useragent
     /** DeviceDetector */
     protected $parser;
 
+    /** @var string  */
+    protected $useragent;
+
     public static function agent(string $useragent)
     {
         return new static($useragent);
