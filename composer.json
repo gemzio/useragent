@@ -1,0 +1,54 @@
+{
+    "name": "gemz/useragent",
+    "description": "This package is a easy wrapper for the awesome Piwik Device Detector",
+    "keywords": [
+        "gemz",
+        "useragent"
+    ],
+    "homepage": "https://github.com/gemzio/useragent",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stefan Riehl",
+            "email": "stefan@sriehl.com",
+            "homepage": "https://gemz.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.3",
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "^8.2",
+        "orchestra/testbench": "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gemz\\Skeleton\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gemz\\Skeleton\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gemz\\Skeleton\\SkeletonServiceProvider"
+            ],
+            "aliases": {
+                "Skeleton": "Gemz\\Skeleton\\SkeletonFacade"
+            }
+        }
+    }
+}
