@@ -1,6 +1,4 @@
-This PHP package skeleton is inspired by the awesome [Spatie Package](https://github.com/spatie/skeleton-php) 
-
-# Very short description of the package
+# Gemz Useragent Parser
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/gemzio/useragent.svg?style=flat-square)](https://packagist.org/packages/gemzio/:package_name)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/gemzio/useragent/run-tests?label=tests)](https://github.com/gemzio/:package_name/actions?query=workflow%3Arun-tests+branch%3Amaster)
@@ -8,7 +6,8 @@ This PHP package skeleton is inspired by the awesome [Spatie Package](https://gi
 [![Total Downloads](https://img.shields.io/packagist/dt/gemzio/useragent.svg?style=flat-square)](https://packagist.org/packages/gemzio/:package_name)
 
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+This package uses the [Piwik Device Detector Package](https://github.com/matomo-org/device-detector) and builds a
+thin wrapper around it.
 
 ## Installation
 
@@ -21,14 +20,47 @@ composer require gemz/useragent
 ## Usage
 
 ``` php
-$skeleton = new Gemz\Skeleton();
-echo $skeleton->echoPhrase('Hello, gemz!');
+use Gemz\Useragent;
+
+// static instantiation
+$parser = Useragent::agent($string);
+
+// object instantiation
+$parser = new Useragent($string);
+
+// Get Result
+$result = $parser->result(); // returns array
+
+(
+    [isBot] => false 
+    [browserType] => browser
+    [browserEngine] => Blink
+    [browserName] => Chrome
+    [browserVersion] => 79.0
+    [device] => desktop
+    [deviceModel] => ''
+    [deviceBrand] => '' 
+    [os] => Mac
+    [isMobile] => false
+)
+
+// Set a new useragent
+$result = $parser
+    ->for($string)
+    ->result();
+    
+// If you need full access to the piwik device detector instance 
+$detector = $parser->parser(); // returns DeviceDetector\DeviceDetector;
+$detector->... 
 ```
 
 ### Testing
 
 ``` bash
+# unit tests
 composer test
+
+# you'll need a driver for code coverage
 composer test-coverage
 ```
 
@@ -47,7 +79,6 @@ If you discover any security related issues, please email stefan@sriehl.com inst
 ## Credits
 
 - [Stefan Riehl](https://github.com/stefanriehl)
-- [All Contributors](../../contributors)
 
 ## Support us
 
