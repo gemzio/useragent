@@ -1,6 +1,6 @@
 {
     "name": "gemz/useragent",
-    "description": "This package is a easy wrapper for the awesome Piwik Device Detector",
+    "description": "This package is an easy wrapper for the Piwik Device Detector",
     "keywords": [
         "gemz",
         "useragent"
