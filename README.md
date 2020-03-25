@@ -31,18 +31,18 @@ $parser = new Useragent($string);
 // Get Result
 $result = $parser->result(); // returns array
 
-(
-    [isBot] => false 
-    [browserType] => browser
-    [browserEngine] => Blink
-    [browserName] => Chrome
-    [browserVersion] => 79.0
-    [device] => desktop
-    [deviceModel] => ''
-    [deviceBrand] => '' 
-    [os] => Mac
-    [isMobile] => false
-)
+[
+    'isBot' => false, 
+    'browserType' => 'browser',
+    'browserEngine' => 'Blink',
+    'browserName' => 'Chrome',
+    'browserVersion' => '79.0',
+    'device' => 'desktop',
+    'deviceModel' => '',
+    'deviceBrand' => '', 
+    'os' => 'Mac',
+    'isMobile' => false,
+]
 
 // Set a new useragent
 $result = $parser
