@@ -58,4 +58,22 @@ class UseragentTest extends TestCase
 
         $this->assertTrue($parser instanceof DeviceDetector);
     }
+
+    public function test_can_use_simple_string_as_agent()
+    {
+        $parser = Useragent::agent('symfony');
+
+        $result = $parser->result();
+
+        $this->assertIsArray($result);
+    }
+
+    public function test_can_use_empty_string_as_agent()
+    {
+        $parser = Useragent::agent('symfony');
+
+        $result = $parser->result();
+
+        $this->assertIsArray($result);
+    }
 }

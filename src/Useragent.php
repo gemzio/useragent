@@ -61,22 +61,22 @@ class Useragent
 
             // browser
             'browserType' => $client !== null
-                ? $this->parser->getClient()['type']
+                ? ($client['type'] ?? '')
                 : '',
 
             // browser engine
             'browserEngine' => $client !== null
-                ? $this->parser->getClient()['engine']
+                ? ($client['engine'] ?? '')
                 : '',
 
             // browser name like Chrome, Safari, Firefox etc.
             'browserName' => $client !== null
-                ? $this->parser->getClient()['name']
+                ? ($client['name'] ?? '')
                 : '',
 
             // browser version
             'browserVersion' => $client !== null
-                ? $this->parser->getClient()['version']
+                ? ($client['version'] ?? '')
                 : '',
 
             // device name
@@ -90,7 +90,7 @@ class Useragent
 
             // operating system
             'os' => $os !== null
-                ? $this->parser->getOs()['name']
+                ? ($os['name'] ?? '')
                 : '',
 
             // is mobile?
