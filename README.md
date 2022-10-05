@@ -6,7 +6,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/gemz/useragent.svg?style=flat-square)](https://packagist.org/packages/gemz/useragent)
 
 
-This package uses the [Piwik Device Detector Package](https://github.com/matomo-org/device-detector) and builds a
+This package uses the [Matoma DeviceDetector Package](https://github.com/matomo-org/device-detector) and builds a
 thin wrapper around it.
 
 ## Installation
